@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/mui-transition-01/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/mui-transition-01/static/js/main.2cf457aa.chunk.js",
-    "main.js.map": "/mui-transition-01/static/js/main.2cf457aa.chunk.js.map",
+    "main.js": "/mui-transition-01/static/js/main.e00d95ca.chunk.js",
+    "main.js.map": "/mui-transition-01/static/js/main.e00d95ca.chunk.js.map",
     "runtime-main.js": "/mui-transition-01/static/js/runtime-main.9554dd99.js",
     "runtime-main.js.map": "/mui-transition-01/static/js/runtime-main.9554dd99.js.map",
-    "static/js/2.bb5ecfb7.chunk.js": "/mui-transition-01/static/js/2.bb5ecfb7.chunk.js",
-    "static/js/2.bb5ecfb7.chunk.js.map": "/mui-transition-01/static/js/2.bb5ecfb7.chunk.js.map",
+    "static/js/2.ffb61d4d.chunk.js": "/mui-transition-01/static/js/2.ffb61d4d.chunk.js",
+    "static/js/2.ffb61d4d.chunk.js.map": "/mui-transition-01/static/js/2.ffb61d4d.chunk.js.map",
     "index.html": "/mui-transition-01/index.html",
-    "precache-manifest.de426d7e7534621752432c59ca514bbb.js": "/mui-transition-01/precache-manifest.de426d7e7534621752432c59ca514bbb.js",
+    "precache-manifest.a5add1bd8482f1f9a1e13cd965d7fb9c.js": "/mui-transition-01/precache-manifest.a5add1bd8482f1f9a1e13cd965d7fb9c.js",
     "service-worker.js": "/mui-transition-01/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/mui-transition-01/static/css/main.5ecd60fb.chunk.css.map",
-    "static/js/2.bb5ecfb7.chunk.js.LICENSE.txt": "/mui-transition-01/static/js/2.bb5ecfb7.chunk.js.LICENSE.txt"
+    "static/js/2.ffb61d4d.chunk.js.LICENSE.txt": "/mui-transition-01/static/js/2.ffb61d4d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9554dd99.js",
-    "static/js/2.bb5ecfb7.chunk.js",
+    "static/js/2.ffb61d4d.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.2cf457aa.chunk.js"
+    "static/js/main.e00d95ca.chunk.js"
   ]
 }
