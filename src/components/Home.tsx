@@ -28,6 +28,8 @@ import SimpleSlide from "./SimpleSlide";
 //   },
 // }));
 
+type DirectionOptions = "left" | "right" | "up" | "down";
+
 interface Props {
   isDarkMode: boolean;
   setIsDarkMode: Function;
@@ -70,28 +72,51 @@ const Home: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                 justify="space-evenly"
                 alignItems="center"
               >
-                {questionsInfo.map((question, index) => (
-                  <Grid
-                    item
-                    container
-                    key={index}
-                    spacing={2}
-                    justify="flex-start"
-                    // alignItems="center"
-                  >
-                    <Grid item>{question.questionNumber}</Grid>
-                    <Grid item>
-                      {/* <img
+                {questionsInfo.map((question, index) => {
+                  const directionNumber = index % 4;
+
+                  let directionText: DirectionOptions = "left";
+
+                  if (directionNumber === 0) {
+                    directionText = "left";
+                  }
+
+                  if (directionNumber === 1) {
+                    directionText = "right";
+                  }
+
+                  if (directionNumber === 2) {
+                    directionText = "up";
+                  }
+
+                  if (directionNumber === 3) {
+                    directionText = "down";
+                  }
+
+                  return (
+                    <Grid
+                      item
+                      container
+                      key={index}
+                      spacing={2}
+                      justify="flex-start"
+                      // alignItems="center"
+                    >
+                      <Grid item>{question.questionNumber}</Grid>
+                      <Grid item>
+                        {/* <img
                       src={`images/${question.imageFileName}.png`}
                       alt={question.imageFileName}
                     ></img> */}
 
-                      <SimpleSlide
-                        imageFileName={question.imageFileName}
-                      ></SimpleSlide>
+                        <SimpleSlide
+                          imageFileName={question.imageFileName}
+                          direction={directionText}
+                        ></SimpleSlide>
+                      </Grid>
                     </Grid>
-                  </Grid>
-                ))}
+                  );
+                })}
                 {/* <pre>{JSON.stringify(questionsInfo)}}</pre> */}
               </Grid>
             </>

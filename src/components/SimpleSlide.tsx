@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 interface SimpleSlideProps {
   imageFileName: string;
+  direction?: "left" | "right" | "up" | "down";
 }
 
 const SimpleSlide: React.FC<SimpleSlideProps> = (props: SimpleSlideProps) => {
@@ -51,7 +52,7 @@ const SimpleSlide: React.FC<SimpleSlideProps> = (props: SimpleSlideProps) => {
           label={checked ? "Hide Number Plate" : "Show Number Plate"}
         />
         <Slide
-          direction="left"
+          direction={props.direction}
           in={checked}
           timeout={1000}
           mountOnEnter
@@ -65,7 +66,7 @@ const SimpleSlide: React.FC<SimpleSlideProps> = (props: SimpleSlideProps) => {
               />
             </svg> */}
             <img
-              src={`images/${props.imageFileName}.png`}
+              src={`mui-transition-01/images/${props.imageFileName}.png`}
               alt={props.imageFileName}
             ></img>
           </Paper>
