@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+// import { blue, green, amber, blueGrey, red, cyan, indigo, lightBlue, grey, teal } from "@material-ui/core/colors";
 
-function App() {
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import Home from "./components/Home";
+
+const App: React.FC = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const theme = createMuiTheme({
+    palette: {
+      type: isDarkMode ? "dark" : "light",
+      primary: {
+        main: "#0b5994",
+      },
+      secondary: {
+        main: "#1d83c6",
+      },
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Switch>
+          {/* <Route path="/" exact component={Home} /> */}
+          <Route
+            path="/"
+            exact
+            render={() => (
+              <Home isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+            )}
+          />
+
+          {/* <Route path="/" render={() => <div>404</div>} /> */}
+          <Route
+            path="*"
+            render={() => (
+              <Home isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+            )}
+          />
+        </Switch>
+      </BrowserRouter>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
