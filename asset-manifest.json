@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/mui-transition-01/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/mui-transition-01/static/js/main.af1c1825.chunk.js",
-    "main.js.map": "/mui-transition-01/static/js/main.af1c1825.chunk.js.map",
+    "main.js": "/mui-transition-01/static/js/main.b6d7fa3d.chunk.js",
+    "main.js.map": "/mui-transition-01/static/js/main.b6d7fa3d.chunk.js.map",
     "runtime-main.js": "/mui-transition-01/static/js/runtime-main.9554dd99.js",
     "runtime-main.js.map": "/mui-transition-01/static/js/runtime-main.9554dd99.js.map",
     "static/js/2.66ac79ed.chunk.js": "/mui-transition-01/static/js/2.66ac79ed.chunk.js",
     "static/js/2.66ac79ed.chunk.js.map": "/mui-transition-01/static/js/2.66ac79ed.chunk.js.map",
     "index.html": "/mui-transition-01/index.html",
-    "precache-manifest.de0618a239bf75f6c9120de07865a103.js": "/mui-transition-01/precache-manifest.de0618a239bf75f6c9120de07865a103.js",
+    "precache-manifest.3774adcf48266e2f49ccbde98cf311cf.js": "/mui-transition-01/precache-manifest.3774adcf48266e2f49ccbde98cf311cf.js",
     "service-worker.js": "/mui-transition-01/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/mui-transition-01/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.66ac79ed.chunk.js.LICENSE.txt": "/mui-transition-01/static/js/2.66ac79ed.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9554dd99.js",
     "static/js/2.66ac79ed.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.af1c1825.chunk.js"
+    "static/js/main.b6d7fa3d.chunk.js"
   ]
 }
