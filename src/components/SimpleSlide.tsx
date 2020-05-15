@@ -66,7 +66,7 @@ const SimpleSlide: React.FC<SimpleSlideProps> = (props: SimpleSlideProps) => {
               />
             </svg> */}
             <img
-              src={`mui-transition-01/images/${props.imageFileName}.png`}
+              src={`${process.env.PUBLIC_URL}/images/${props.imageFileName}.png`}
               alt={props.imageFileName}
             ></img>
           </Paper>
