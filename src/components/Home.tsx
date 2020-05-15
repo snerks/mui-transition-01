@@ -65,7 +65,7 @@ const Home: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                 Name the Film or TV Show that used these number plates.
               </Grid>
               <Grid
-                style={{ margin: "0 30px" }}
+                style={{ margin: "0 10px 0 0" }}
                 item
                 container
                 direction="column"
