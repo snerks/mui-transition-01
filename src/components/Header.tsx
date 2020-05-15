@@ -40,13 +40,13 @@ const Header: React.FC<Props> = ({ isDarkMode, setIsDarkMode, title }) => {
           <PlaylistAddIcon />
         </Button> */}
 
-        <Paper title="use this switch for dark/light mode">
+        {/* <Paper title="use this switch for dark/light mode">
           <HighlightIcon />
         </Paper>
         <Switch
           checked={isDarkMode}
           onChange={() => setIsDarkMode(!isDarkMode)}
-        />
+        /> */}
       </Toolbar>
     </AppBar>
   );
