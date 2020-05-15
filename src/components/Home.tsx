@@ -8,6 +8,8 @@ import {
   CircularProgress,
   // Chip,
   useTheme,
+  Switch,
+  TextField,
   // Theme,
 } from "@material-ui/core";
 import Header from "./Header";
@@ -40,9 +42,13 @@ const Home: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
   const theme = useTheme();
   // const styles = useStyles();
 
+  const [password, setPassword] = useState("");
+  // const [isActive, setIsActive] = useState(password === "withnail");
   const [isLoading] = useState(false);
 
   const [questionsInfo] = useState<QuestionsInfo>(questions);
+
+  const isActive = password === "withnail";
 
   return (
     <ThemeProvider theme={theme}>
@@ -55,79 +61,93 @@ const Home: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
               setIsDarkMode={setIsDarkMode}
             />
           </Grid>
+          <Grid item>
+            {/* <Switch
+              checked={isActive}
+              onChange={() => setIsActive(!isActive)}
+            /> */}
+            <TextField
+              type="password"
+              placeholder="magic word?"
+              style={{ marginLeft: 10 }}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Grid>
           {isLoading ? (
             <Backdrop open={true}>
               <CircularProgress color="inherit" />
             </Backdrop>
           ) : (
-            <>
-              <Grid style={{ marginLeft: 30 }}>
-                Name the Film or TV Show that used these number plates.
-              </Grid>
-              <Grid
-                style={{ margin: "0 10px 0 0" }}
-                item
-                container
-                direction="column"
-                spacing={3}
-                justify="space-evenly"
-                alignItems="center"
-              >
-                {questionsInfo.map((question, index) => {
-                  const directionNumber = index % 4;
+            isActive && (
+              <>
+                <Grid style={{ marginLeft: 30 }}>
+                  Name the Film or TV Show that used these number plates.
+                </Grid>
+                <Grid
+                  style={{ margin: "0 10px 0 0" }}
+                  item
+                  container
+                  direction="column"
+                  spacing={3}
+                  justify="space-evenly"
+                  alignItems="center"
+                >
+                  {questionsInfo.map((question, index) => {
+                    const directionNumber = index % 4;
 
-                  let directionText: DirectionOptions = "left";
+                    let directionText: DirectionOptions = "left";
 
-                  if (directionNumber === 0) {
-                    directionText = "left";
-                  }
+                    if (directionNumber === 0) {
+                      directionText = "left";
+                    }
 
-                  if (directionNumber === 1) {
-                    directionText = "right";
-                  }
+                    if (directionNumber === 1) {
+                      directionText = "right";
+                    }
 
-                  if (directionNumber === 2) {
-                    directionText = "down"; // don't use up
-                  }
+                    if (directionNumber === 2) {
+                      directionText = "down"; // don't use up
+                    }
 
-                  if (directionNumber === 3) {
-                    directionText = "down";
-                  }
+                    if (directionNumber === 3) {
+                      directionText = "down";
+                    }
 
-                  return (
-                    <Grid
-                      item
-                      container
-                      key={index}
-                      spacing={2}
-                      justify="flex-start"
-                      // alignItems="center"
-                    >
-                      <Grid item>Q{question.questionNumber}</Grid>
-                      <Grid item>
-                        {/* <img
+                    return (
+                      <Grid
+                        item
+                        container
+                        key={index}
+                        spacing={2}
+                        justify="flex-start"
+                        // alignItems="center"
+                      >
+                        <Grid item>Q{question.questionNumber}</Grid>
+                        <Grid item>
+                          {/* <img
                       src={`images/${question.imageFileName}.png`}
                       alt={question.imageFileName}
                     ></img> */}
 
-                        {index % 3 !== 0 ? (
-                          <SimpleSlide
-                            imageFileName={question.imageFileName}
-                            direction={directionText}
-                          ></SimpleSlide>
-                        ) : (
-                          <SimpleFade
-                            imageFileName={question.imageFileName}
-                            direction={directionText}
-                          ></SimpleFade>
-                        )}
+                          {index % 3 !== 0 ? (
+                            <SimpleSlide
+                              imageFileName={question.imageFileName}
+                              direction={directionText}
+                            ></SimpleSlide>
+                          ) : (
+                            <SimpleFade
+                              imageFileName={question.imageFileName}
+                              direction={directionText}
+                            ></SimpleFade>
+                          )}
+                        </Grid>
                       </Grid>
-                    </Grid>
-                  );
-                })}
-                {/* <pre>{JSON.stringify(questionsInfo)}}</pre> */}
-              </Grid>
-            </>
+                    );
+                  })}
+                  {/* <pre>{JSON.stringify(questionsInfo)}}</pre> */}
+                </Grid>
+              </>
+            )
           )}
         </Grid>
       </Paper>
