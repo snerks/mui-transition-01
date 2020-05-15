@@ -3,12 +3,12 @@ import {
   AppBar,
   Toolbar,
   Typography,
-  Switch,
-  Paper,
+  // Switch,
+  // Paper,
   // IconButton,
   // Button,
 } from "@material-ui/core";
-import HighlightIcon from "@material-ui/icons/HighlightOutlined";
+// import HighlightIcon from "@material-ui/icons/HighlightOutlined";
 // import HomeIcon from "@material-ui/icons/Home";
 // import PlaylistAddIcon from "@material-ui/icons/PlaylistAdd";
 import { makeStyles } from "@material-ui/styles";

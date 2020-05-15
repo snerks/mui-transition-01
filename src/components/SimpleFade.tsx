@@ -1,7 +1,7 @@
 import React from "react";
 import Switch from "@material-ui/core/Switch";
 import Paper from "@material-ui/core/Paper";
-import Slide from "@material-ui/core/Slide";
+// import Slide from "@material-ui/core/Slide";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { makeStyles, createStyles, Theme } from "@material-ui/core/styles";
 import { Fade } from "@material-ui/core";
