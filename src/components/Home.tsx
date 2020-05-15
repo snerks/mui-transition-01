@@ -103,7 +103,7 @@ const Home: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                       justify="flex-start"
                       // alignItems="center"
                     >
-                      <Grid item>Q {question.questionNumber}</Grid>
+                      <Grid item>Q{question.questionNumber}</Grid>
                       <Grid item>
                         {/* <img
                       src={`images/${question.imageFileName}.png`}
