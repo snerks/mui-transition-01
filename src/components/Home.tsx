@@ -48,7 +48,7 @@ const Home: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
 
   const [questionsInfo] = useState<QuestionsInfo>(questions);
 
-  const isActive = password === "withnail";
+  const isActive = password === "ecumenical";
 
   return (
     <ThemeProvider theme={theme}>
