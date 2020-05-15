@@ -18,6 +18,7 @@ import questions from "../models/Question";
 // import { makeStyles } from "@material-ui/styles";
 import { QuestionsInfo } from "../models/Question";
 import SimpleSlide from "./SimpleSlide";
+import SimpleFade from "./SimpleFade";
 
 // const useStyles = makeStyles<Theme>((theme) => ({
 //   addedTodayNonZero: {
@@ -86,7 +87,7 @@ const Home: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                   }
 
                   if (directionNumber === 2) {
-                    directionText = "up";
+                    directionText = "down"; // don't use up
                   }
 
                   if (directionNumber === 3) {
@@ -102,17 +103,24 @@ const Home: React.FC<Props> = ({ isDarkMode, setIsDarkMode }) => {
                       justify="flex-start"
                       // alignItems="center"
                     >
-                      <Grid item>{question.questionNumber}</Grid>
+                      <Grid item>Question {question.questionNumber}</Grid>
                       <Grid item>
                         {/* <img
                       src={`images/${question.imageFileName}.png`}
                       alt={question.imageFileName}
                     ></img> */}
 
-                        <SimpleSlide
-                          imageFileName={question.imageFileName}
-                          direction={directionText}
-                        ></SimpleSlide>
+                        {index % 3 !== 0 ? (
+                          <SimpleSlide
+                            imageFileName={question.imageFileName}
+                            direction={directionText}
+                          ></SimpleSlide>
+                        ) : (
+                          <SimpleFade
+                            imageFileName={question.imageFileName}
+                            direction={directionText}
+                          ></SimpleFade>
+                        )}
                       </Grid>
                     </Grid>
                   );
