@@ -50,7 +50,7 @@ const SimpleFade: React.FC<SimpleFadeProps> = (props) => {
       <div className={classes.wrapper}>
         <FormControlLabel
           control={<Switch checked={checked} onChange={handleChange} />}
-          label={checked ? "Hide Number Plate" : "Show Number Plate"}
+          label={checked ? "Hide" : "Show"}
         />
         <Fade in={checked} timeout={1000} mountOnEnter unmountOnExit>
           <Paper elevation={4} className={classes.paper}>

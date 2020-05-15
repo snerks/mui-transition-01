@@ -49,7 +49,7 @@ const SimpleSlide: React.FC<SimpleSlideProps> = (props: SimpleSlideProps) => {
       <div className={classes.wrapper}>
         <FormControlLabel
           control={<Switch checked={checked} onChange={handleChange} />}
-          label={checked ? "Hide Number Plate" : "Show Number Plate"}
+          label={checked ? "Hide" : "Show"}
         />
         <Slide
           direction={props.direction}
