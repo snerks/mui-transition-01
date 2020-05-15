@@ -66,6 +66,7 @@ const SimpleSlide: React.FC<SimpleSlideProps> = (props: SimpleSlideProps) => {
               />
             </svg> */}
             <img
+              style={{ maxWidth: 250 }}
               src={`${process.env.PUBLIC_URL}/images/${props.imageFileName}.png`}
               alt={props.imageFileName}
             ></img>
